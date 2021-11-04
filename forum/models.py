@@ -29,7 +29,7 @@ class Disease(models.Model):
     problem=models.TextField()
 
 class Image(models.Model):
-    crop_img=models.ImageField(upload_to='image'),
+    crop_img=models.ImageField(upload_to='image',),
     posted_at= models.DateField(auto_now_add=True),
 
     def save_img(self):
@@ -49,7 +49,7 @@ class Farmer(models.Model):
         self.save()
 
 class Crop(models.Model):
-    crop_disease=models.ForeignKey(Disease, on_delete=models.CASCADE)
+    crop_disease=models.CharField(max_length=50)
     crop_name=models.CharField(max_length=20)
 
     def __str__(self):
