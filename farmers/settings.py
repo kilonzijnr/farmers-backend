@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'forum',
     'rest_framework',
-    'rest_registration',
+    'django_registration',
+    'rest_auth.registration',
     'corsheaders',
 ]
 
@@ -85,8 +86,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'farmers',
-        'USER': 'moringa',
-        'PASSWORD': 'moringa',
+        'USER': 'kilonzijnr',
+        'PASSWORD': 'kilonzi05',
     }
 }
 REST_REGISTRATION = {
